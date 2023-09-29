@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "config": "^3.3.9",
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
+    "js-yaml": "^4.1.0",
     "mysql": "^2.18.1"
   },
   "name": "discordbots-assignment-bot",
@@ -20,5 +22,6 @@
     "url": "https://github.com/borisonekenobi/discordBots-Assignment-Bot/issues"
   },
   "homepage": "https://github.com/borisonekenobi/discordBots-Assignment-Bot#readme",
+  "keywords": [],
   "description": ""
 }
