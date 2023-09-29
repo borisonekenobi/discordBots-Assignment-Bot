@@ -1,4 +1,5 @@
-const { mysql } = require('mysql');
+const mysql = require('mysql2');
+const config = require('config');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -11,13 +12,19 @@ module.exports = {
 }
 
 function compileTable() {
-    let config = require('config');
+    let con = mysql.createConnection({
+        host: config.host,
+        user: config.username,
+        password: config.password
+    });
 
-    /*let con = mysql.createConnection({
-        host: "ip-address",
-        user: "username",
-        password: "password"
-    });*/
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query("SELECT * FROM tasks", function (err, result, fields) {
+            if (err) throw err;
+            console.log(result);
+        });
+    });
 
-    return '' + config.get('db.port');
+    return '' + config.get('db.username');
 }

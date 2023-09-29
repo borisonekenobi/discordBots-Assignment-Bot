@@ -4,7 +4,7 @@
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
     "js-yaml": "^4.1.0",
-    "mysql": "^2.18.1"
+    "mysql2": "^3.6.1"
   },
   "name": "discordbots-assignment-bot",
   "version": "1.0.0",
